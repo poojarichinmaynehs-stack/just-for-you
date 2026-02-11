@@ -1,0 +1,88 @@
+body {
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(135deg, #ffe0ec, #ffc2dc);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.container {
+  background: #fff5f8;
+  padding: 35px;
+  border-radius: 30px;
+  text-align: center;
+  width: 350px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+h1 {
+  color: #ff4d88;
+  margin-bottom: 15px;
+}
+
+.text {
+  color: #444;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Big Heart */
+.big-heart {
+  width: 90px;
+  height: 90px;
+  background: #ff4d88;
+  position: relative;
+  margin: 25px auto;
+  transform: rotate(-45deg);
+  animation: beat 1.2s infinite ease-in-out;
+}
+
+.big-heart::before,
+.big-heart::after {
+  content: "";
+  width: 90px;
+  height: 90px;
+  background: #ff4d88;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.big-heart::before {
+  top: -45px;
+  left: 0;
+}
+
+.big-heart::after {
+  left: 45px;
+  top: 0;
+}
+
+@keyframes beat {
+  0% { transform: rotate(-45deg) scale(1); }
+  50% { transform: rotate(-45deg) scale(1.2); }
+  100% { transform: rotate(-45deg) scale(1); }
+}
+
+.signature {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #ff4d88;
+}
+
+.next-btn {
+  margin-top: 20px;
+  background: #ff4d88;
+  color: white;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 30px;
+  font-size: 15px;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(255,77,136,0.4);
+}
+
+.next-btn:hover {
+  background: #e63971;
+}

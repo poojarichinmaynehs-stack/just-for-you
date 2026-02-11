@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" href="JCP.svg">
+  <meta charset="UTF-8">
+  <title>Just for You 💖</title>
+  <link rel="stylesheet" href="page2.css">
+</head>
+<body>
+
+  <section id="sec1" class="section">
+<div class="side-gifs">
+  <img src="moti-hearts.gif" class="gif left">
+<h1 id="title">💖Happy Birthday My Cutiepie💖</h1>
+    <img src="moti-heartR.gif" class="gif right">
+  </div>
+
+<div class="media-row">
+  <img src="pink-heart-cute.gif" class="gif left">
+
+  <div class="single-photo">
+    <img src="love.jpg" alt="My Cutiepie 💕">
+  </div>
+
+  <img src="pink-heart-cute.gif" class="gif right">
+</div>
+<p id="line">
+  Today isn’t just another date on the calendar — it’s the day the world got a little brighter because you were born 💕  
+  Your smile has this magical way of making everything feel okay, and your presence turns ordinary moments into beautiful memories.  
+  On your birthday, I hope you feel as special, loved, and cherished as you truly are — not just today, but every single day 🎂✨  
+  Happy Birthday to my cutiepie, my favorite person, and my forever reason to smile 🫶💖
+</p>
+
+
+</section>
+
+<section id="sec2" class="section poem-section">
+    <div class="side-gifs">
+  <img src="pink-cute.gif" class="gif left">
+    <div class="poem-layout">
+
+    <!-- LEFT PIC (slides to right) -->
+    <img src="jcp.jpg" class="side-pic pic-animate" alt="Memory 💕">
+
+    <!-- POEM (slides to left) -->
+    <div class="poem-box poem-animate">
+      <h2>For You 💗</h2>
+      <p class="poem">
+        You’re not just a part of my day,<br>
+You’re the reason my days feel right.<br>
+In your smile, I find my calm,<br>
+In your voice, my quiet night.<br><br>
+
+When the world feels loud and messy,<br>
+You’re the peace I always choose.<br>
+Holding your hand feels like home,<br>
+Like I’ve got nothing left to lose.<br><br>
+
+I don’t need perfect words or lines,<br>
+Just you, staying by my side.<br>
+If love had a simple meaning,<br>
+It would be you — my heart, my pride. 🌙💫
+      </p>
+    </div>
+
+  </div>
+
+  <div class="sparkles"></div>
+  <img src="pink-cute.gif" class="gif right">
+  </div>
+  <div class="sparkle-layer"></div>
+
+
+  </section>
+
+  <section id="sec3" class="section">
+    <h2 class="sec3-title">Things I  Think & I Promise You 💞</h2>
+
+  <div class="promise-grid">
+    <div class="promise-card">
+      <span>💗</span>
+      <p>Aap sirf mere life ka hissa nahi ho — aap woh feeling ho jo har cheez ko meaningful bana deti hai 💫🫶</p>
+    </div>
+
+    <div class="promise-card">
+      <span>🌸</span>
+      <p>Aapke saath silence bhi comforting lagta hai, jaise sab theek ho aur duniya thodi slow ho jaati hai 😌🤍</p>
+    </div>
+
+    <div class="promise-card">
+      <span>🫶</span>
+      <p>AAp mujhe har din better insaan banne ka reason dete ho, bina kuch kahe, bina kuch maange 💖🌷</p>
+    </div>
+
+    <div class="promise-card">
+      <span>✨</span>
+      <p>Chahe life kahin bhi le jaaye, mera dil hamesha aapke paas hi rahega — today, tomorrow, always 💞♾️</p>
+    </div>
+  </div>
+  </section>
+
+  <section id="sec4" class="section">
+    <section id="sec4" class="section final-section">
+
+  <div class="final-box">
+    <h2>💖 A Special Note 💖</h2>
+
+    <p class="final-text">
+      Aapki wajah se meri duniya thodi zyada bright lagti hai, thodi zyada warm,
+      aur kaafi zyada meaningful 🌸✨  
+      Aap sirf meri life ka ek part nahi ho — aap woh reason ho jinki wajah se
+      main khud pe, future pe, aur pyaar pe vishwas karta hoon 🫶  
+      <br><br>
+      Aapki har smile jo chehre pe aati hai, wo mere dil tak seedha pahunch jaati hai 💓  
+      Aur har woh moment jo hum saath bitate hain, chahe chhota ho ya simple,
+      mere liye priceless hota hai 🕊️  
+      <br><br>
+      Main perfect nahi hoon, aur na hi yeh life hamesha easy hogi —  
+      lekin ek baat hamesha clear hai:
+      <strong>aapka saath sab kuch better bana deta hai</strong> 🌷  
+      <br><br>
+      Is birthday pe main bas itna chahta hoon ki aap hamesha khush raho,
+      confident raho, aur kabhi yeh doubt na aaye ki aap kitni special ho 💫  
+      Aap ho, isliye meri duniya hai.  
+      Aap ho, isliye sab kuch thoda zyada beautiful lagta hai 💖  
+      <br><br>
+      Happy Birthday once again, my cutiepie 🎂🫶  
+      Today, tomorrow, and always — <strong>it’s you</strong> ♾️❤️
+    </p>
+
+  </div>
+<div class="final-heart"></div>
+
+<button class="final-btn" onclick="finalClick()">Always You ❤️</button>
+
+<script>
+  function finalClick() {
+    alert("Always you. Forever us. 💖");
+  }
+</script>
+
+</section>
+
+  </section>
+<canvas id="confetti"></canvas>
+
+<script src="confetti.js"></script>
+<script>
+  const observer = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("animate-in");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.3 }
+  );
+
+  document.querySelectorAll(".poem-section").forEach(section => {
+    observer.observe(section);
+  });
+</script>
+<script>
+  const sparkleSection = document.querySelector("#sec2 .sparkle-layer");
+
+  function createSparkle() {
+    const s = document.createElement("span");
+    s.classList.add("sparkle");
+
+    s.style.left = Math.random() * 100 + "%";
+    s.style.top = Math.random() * 100 + "%";
+    s.style.animationDuration = 3 + Math.random() * 2 + "s";
+
+    sparkleSection.appendChild(s);
+
+    setTimeout(() => s.remove(), 5000);
+  }
+
+  const sparkleObserver = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          sparkleInterval = setInterval(createSparkle, 600);
+        } else {
+          clearInterval(sparkleInterval);
+        }
+      });
+    },
+    { threshold: 0.3 }
+  );
+
+  let sparkleInterval;
+  sparkleObserver.observe(document.getElementById("sec2"));
+</script>
+<script>
+  const sec3 = document.getElementById("sec3");
+
+  const sec3Observer = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          sec3.classList.add("animate-sec3");
+          sec3Observer.unobserve(sec3);
+        }
+      });
+    },
+    { threshold: 0.3 }
+  );
+
+  sec3Observer.observe(sec3);
+</script>
+<footer class="site-footer">
+  <p>
+    Made with ❤️, care, and a lot of feelings  
+    <br>
+    Just for you 💖
+  </p>
+</footer>
+
+</body>
+</html>

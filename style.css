@@ -1,0 +1,92 @@
+body {
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(135deg, #ffd6e8, #ffb3d9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.login-box {
+  background: #fff0f6;
+  padding: 30px;
+  border-radius: 25px;
+  width: 320px;
+  text-align: center;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+h2 {
+  color: #ff4d88;
+}
+
+input {
+  width: 90%;
+  padding: 10px;
+  border-radius: 20px;
+  border: 1px solid #ff99c8;
+  outline: none;
+  margin-bottom: 15px;
+}
+
+button {
+  background: #ff4d88;
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #e63971;
+}
+
+/* Heart */
+.heart {
+  width: 60px;
+  height: 60px;
+  background: #ff4d88;
+  position: relative;
+  margin: 0 auto 20px;
+  transform: rotate(-45deg);
+  animation: beat 1s infinite;
+}
+
+.heart::before,
+.heart::after {
+  content: "";
+  width: 60px;
+  height: 60px;
+  background: #ff4d88;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.heart::before {
+  top: -30px;
+  left: 0;
+}
+
+.heart::after {
+  left: 30px;
+  top: 0;
+}
+
+@keyframes beat {
+  0% { transform: rotate(-45deg) scale(1); }
+  50% { transform: rotate(-45deg) scale(1.15); }
+  100% { transform: rotate(-45deg) scale(1); }
+}
+
+#message {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+#attempts {
+  font-size: 14px;
+  color: #777;
+}
+
